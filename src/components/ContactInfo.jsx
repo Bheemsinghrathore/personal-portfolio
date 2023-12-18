@@ -2,6 +2,7 @@ import React from "react";
 import { FiPhoneCall } from "react-icons/fi";
 import { FaRegEnvelope } from "react-icons/fa";
 import { MdLocationPin } from "react-icons/md";
+import pageInfo from "../json/pageInfo";
 
 function ContactInfo() {
   return (
@@ -17,42 +18,25 @@ function ContactInfo() {
         <div className="space-y-2">
           <div className="flex items-center space-x-5 justify-center">
             <FiPhoneCall className="text-3xl text-[#f7ab0a] animate-pulse" />
-            <p className="text-xl">+91-9693022044</p>
+            <p className="text-xl">{pageInfo[0].phoneNumber}</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <FaRegEnvelope className="text-3xl text-[#f7ab0a] animate-pulse" />
-            <p className="text-xl">rkashyap251@gmail.com</p>
+            <p className="text-xl">{pageInfo[0].email}</p>
           </div>
           <div className="flex items-center space-x-5 justify-center">
             <MdLocationPin className="text-3xl text-[#f7ab0a] animate-pulse" />
-            <p className="text-xl">Ranchi, Jharkhand</p>
+            <p className="text-xl">{pageInfo[0].address}</p>
           </div>
         </div>
 
-        <form
-          className="flex flex-col space-y-2 w-fit mx-auto"
-        >
+        <form className="flex flex-col space-y-2 w-fit mx-auto">
           <div className="flex space-x-2">
-            <input
-              placeholder="Name"
-              className="contactInput"
-              type="text"
-            />
-            <input
-              placeholder="Email"
-              className="contactInput"
-              type="email"
-            />
+            <input placeholder="Name" className="contactInput" type="text" />
+            <input placeholder="Email" className="contactInput" type="email" />
           </div>
-          <input
-            placeholder="Subject"
-            className="contactInput"
-            type="text"
-          />
-          <textarea
-            placeholder="Message"
-            className="contactInput"
-          />
+          <input placeholder="Subject" className="contactInput" type="text" />
+          <textarea placeholder="Message" className="contactInput" />
           <button
             type="submit"
             className="bg-[#f7ab0a]/80 hover:bg-[#f7ab0a] py-5 px-10 rounded-md text-black font-bold text-lg"

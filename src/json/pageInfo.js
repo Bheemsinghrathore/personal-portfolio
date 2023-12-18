@@ -11,7 +11,7 @@ export default [
     email: "rathorebheem9@gmail.com",
     _type: "image",
     name: "Bheem Singh Rathore",
-    phoneNumber: "+917232893349",
+    phoneNumber: "+91-7232893349",
     role: "Frontend Developer",
   },
 ];
